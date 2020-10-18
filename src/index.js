@@ -6,6 +6,8 @@ module.exports = function toReadable (number) {
 }
 
 function numberToWords (number) {
+  if(number == 0) return 'zero';
+  
   num = ('000000000' + number).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
   if (!num) return;
   var reqString = '';
